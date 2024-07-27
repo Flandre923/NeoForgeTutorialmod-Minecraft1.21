@@ -1,0 +1,21 @@
+{
+    "anvil_cost":8,
+    "description":"Auto Smelt",
+    "effects":{
+    },
+    "slots":[
+        "mainhand"
+    ],
+    "max_level":1,
+    "exclusive_set":[],
+    "max_cost":{
+        "base":50,
+        "per_level_above_first":0
+    },
+    "min_cost":{
+        "base":25,
+        "per_level_above_first":0
+    },
+    "supported_items":"#minecraft:enchantable/mining",
+    "weight":2
+}

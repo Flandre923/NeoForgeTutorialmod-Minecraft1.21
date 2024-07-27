@@ -1,0 +1,34 @@
+{
+    "_comment":"This is from DQwerty's example code",
+    "anvil_cost":8,
+    "description":"Brittle",
+    "effects":{
+        "minecraft:item_damage":[
+            {
+                "effect":{
+                    "type":"minecraft:multiply",
+                    "factor":16
+                },
+                "requirements":{
+                    "condition":"minecraft:random_chance",
+                    "chance": 0.125
+                }
+            }
+        ]
+    },
+    "slots":[
+        "any"
+    ],
+    "max_level":1,
+    "exclusive_set":["minecraft:unbreaking"],
+    "max_cost":{
+        "base":50,
+        "per_level_above_first":0
+    },
+    "min_cost":{
+        "base":25,
+        "per_level_above_first":0
+    },
+    "supported_items":"#minecraft:enchantable/durability",
+    "weight":2
+}
