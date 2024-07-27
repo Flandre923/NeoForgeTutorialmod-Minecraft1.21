@@ -1,0 +1,165 @@
+{
+  "text.autoconfig.examplemod.title": "Link Start!",
+
+  "text.autoconfig.examplemod.option.isQinNa": "isQinNa",
+  "text.autoconfig.examplemod.option.isLlamaSpitForever": "isLlamaSpitForever",
+  "text.autoconfig.examplemod.option.isGoatDashTogether": "isGoatDashTogether",
+  "text.autoconfig.examplemod.option.isGoatDashForever": "isGoatDashForever",
+  "text.autoconfig.examplemod.option.isBeeRideable": "isBeeRideable",
+  "text.autoconfig.examplemod.option.isNestedBoxInfinite": "isNestedBoxInfinite",
+  "text.autoconfig.examplemod.option.isShieldDashable": "isShieldDashable",
+  "text.autoconfig.examplemod.option.isBowDashable": "isBowDashable",
+  "text.autoconfig.examplemod.option.isSwimTripwire": "isSwimTripwire",
+  "text.autoconfig.examplemod.option.isSpyglassCanPin": "isSpyglassCanPin",
+  "text.autoconfig.examplemod.option.lead": "lead",
+  "text.autoconfig.examplemod.option.lead.isLeadCanLinkEveryMob": "isLeadCanLinkEveryMob",
+  "text.autoconfig.examplemod.option.lead.isLeadCanLinkTogether": "isLeadCanLinkTogether",
+  "text.autoconfig.examplemod.option.lead.breakDistance": "breakDistance",
+  "text.autoconfig.examplemod.option.isAlwaysEnchantable": "isAlwaysEnchantable",
+  "text.autoconfig.examplemod.option.isFireworkCanUseOnEntity": "isFireworkCanUseOnEntity",
+  "text.autoconfig.examplemod.option.isFireworkCanHitOnEntity": "isFireworkCanHitOnEntity",
+  "text.autoconfig.examplemod.option.isFuThrowable": "isFuThrowable",
+  "text.autoconfig.examplemod.option.toggleA": "toggleA",
+  "text.autoconfig.examplemod.option.toggleB": "toggleB",
+  "text.autoconfig.examplemod.option.stuff": "stuff",
+
+
+  "tooltip.examplemod.metal_detector.tooltip": "Find valuables underground",
+  "tooltip.examplemod.villager_item.tooltip": "Delicious",
+  "tooltip.examplemod.ruby_stuff.tooltip": "§e",
+  "tooltip.examplemod.vr_pen.tooltip": "Holding dye in the off-hand changes the color, and the quantity of the item in the off-hand determines the size of the square brush",
+  "tooltip.examplemod.vr_rubber.tooltip": "The quantity of the item in the off-hand determines the size of the eraser, and holding a ruby in the off-hand clears a large area.",
+  "tooltip.examplemod.vr_compasses.tooltip": "Draw a circle by selecting three points: the first point is the center of the circle, the second determines the radius, and the third establishes the plane.",
+
+
+  "item.examplemod.ruby": "Mafish",
+  "item.examplemod.raw_ruby": "Fired Mafish",
+  "item.examplemod.cool_glass": "COOL GLASS",
+  "item.examplemod.cool_glass2": "COOL GLASS2",
+  "item.examplemod.metal_detector": "Metal Detector",
+  "item.examplemod.tomato": "Tomato",
+  "item.examplemod.coal_briquette": "Coal Briquette",
+
+  "item.examplemod.ruby_staff": "§eMagic stuff",
+
+  "item.examplemod.ruby_pickaxe": "RUBY PICKAXE",
+
+  "item.examplemod.ruby_helmet": "Ruby Helmet",
+  "item.examplemod.ruby_chestplate": "Ruby Chestplate",
+  "item.examplemod.ruby_leggings": "Ruby Leggings",
+  "item.examplemod.ruby_boots": "Ruby Boots",
+
+  "block.examplemod.ruby_block": "RUBY_BLOCK",
+  "block.examplemod.raw_ruby_block": "RAW RUBY BLOCK",
+  "block.examplemod.white_cat_block": "WHITE CAT BLOCK",
+  "block.examplemod.gold_melon": "gold_melon",
+  "block.examplemod.potato_tnt_prepare": "potato_tnt_prepare",
+  "block.examplemod.potato_tnt": "potato_tnt",
+  "block.examplemod.gem_polishing_station": "Gem Polishing Station",
+
+  "tooltip.examplemod.fire_happy": "Fire Happy",
+
+
+
+
+
+  "entity.minecraft.villager.sound_master": "Soundmaster",
+
+  "itemgroup.ruby": "Ruby Tutorial Group",
+
+  "item.examplemod.bread_sword": "bread_sword",
+  "item.examplemod.bread_sword_hot": "bread_sword_hot",
+  "item.examplemod.bread_sword_very_hot": "bread_sword_very_hot",
+  "item.examplemod.tnt_ball": "TNT Ball",
+  "item.examplemod.stone_ball": "Stone Ball",
+  "item.examplemod.apple_vision_pro": "Apple Vision Pro",
+  "item.examplemod.fu": "FU",
+  "item.examplemod.iron_fake": "Tieding",
+  "item.examplemod.zhuge": "zhuge",
+  "item.examplemod.poison_sword": "poison_sword",
+  "item.examplemod.firework_arrow": "firework_arrow",
+  "item.examplemod.stargazy_pie": "stargazy_pie",
+  "item.examplemod.time_stop": "time_stop",
+  "item.examplemod.math_sword": "math_sword",
+  "item.examplemod.colliable": "colliable",
+  "item.examplemod.lightning_ball": "lightning_ball",
+  "item.examplemod.milk_flesh": "milk_flesh",
+  "item.examplemod.cheese_berger": "cheese_berger",
+  "item.examplemod.rtx4090": "RTX4090",
+  "item.examplemod.llama_item": "llama_item",
+  "item.examplemod.villager_item": "villager_item",
+  "item.examplemod.iron_golem_item": "iron_golem_item",
+  "item.examplemod.lightning_item": "lightning_item",
+  "item.examplemod.switch": "switch",
+
+  "item.examplemod.vr_pen": "vr_pen",
+  "item.examplemod.vr_rubber": "vr_rubber",
+  "item.examplemod.vr_ruler": "vr_ruler",
+  "item.examplemod.vr_compasses": "vr_compasses",
+  "item.examplemod.vr_magic": "vr_magic",
+  "item.examplemod.vr_getting_over_it": "vr_getting_over_it",
+
+
+  "enchantment.examplemod.bad_luck_of_sea": "bad_luck_of_sea",
+  "enchantment.examplemod.eight_gods_pass_sea": "eight_gods_pass_sea",
+  "enchantment.examplemod.kill_chicken_get_egg": "kill_chicken_get_egg",
+  "enchantment.examplemod.go_to_sky": "go_to_sky",
+  "enchantment.examplemod.gong_xi_fa_cai": "gong_xi_fa_cai",
+  "enchantment.examplemod.mercy": "mercy",
+  "enchantment.examplemod.kill_my_horse": "kill_my_horse",
+  "enchantment.examplemod.kill_my_horse_plus": "kill_my_horse_plus",
+  "enchantment.examplemod.hot_potato": "hot_potato",
+  "enchantment.examplemod.very_easy": "very_easy",
+  "enchantment.examplemod.reverse": "reverse",
+  "enchantment.examplemod.pay_to_play": "pay_to_play",
+  "enchantment.examplemod.fear": "fear",
+  "enchantment.examplemod.mute": "mute",
+  "enchantment.examplemod.slippery": "slippery",
+  "enchantment.examplemod.never_gonna": "never_gonna",
+  "enchantment.examplemod.resonance": "resonance",
+  "enchantment.examplemod.no_blast_protection": "no_blast_protection",
+  "enchantment.examplemod.a_leaf": "a_leaf",
+  "enchantment.examplemod.butterfly": "butterfly",
+  "enchantment.examplemod.fangsheng": "fangsheng",
+  "enchantment.examplemod.never_stop": "never_stop",
+  "enchantment.examplemod.bow_left": "bow_left",
+  "enchantment.examplemod.super_projectile_protection": "super_projectile_protection",
+  "enchantment.examplemod.sticky": "sticky",
+
+
+
+  "key.category.examplemod.tutorial": "Mafish Mod",
+  "key.examplemod.throw_item": "throw_item",
+
+  "effect.examplemod.ironman": "Link Start",
+  "effect.examplemod.flower_effect": "flower_effect",
+  "effect.examplemod.teleport_effect": "teleport_effect",
+  "effect.examplemod.spider_effect": "spider_effect",
+  "effect.examplemod.sheep_effect": "sheep_effect",
+  "effect.examplemod.antidote_effect": "antidote_effect",
+
+  "item.minecraft.potion.effect.flower_potion": "flower_potion",
+  "item.minecraft.splash_potion.effect.flower_potion": "Splash flower_potion",
+  "item.minecraft.lingering_potion.effect.flower_potion": "Lingering flower_potion",
+  "item.minecraft.tipped_arrow.effect.flower_potion": "flower_potion",
+
+  "item.minecraft.potion.effect.teleport_potion": "teleport_potion",
+  "item.minecraft.splash_potion.effect.teleport_potion": "Splash teleport_potion",
+  "item.minecraft.lingering_potion.effect.teleport_potion": "Lingering teleport_potion",
+  "item.minecraft.tipped_arrow.effect.teleport_potion": "teleport_potion",
+
+  "item.minecraft.potion.effect.spider_potion": "spider_potion",
+  "item.minecraft.splash_potion.effect.spider_potion": "Splash spider_potion",
+  "item.minecraft.lingering_potion.effect.spider_potion": "Lingering spider_potion",
+  "item.minecraft.tipped_arrow.effect.spider_potion": "spider_potion",
+
+  "item.minecraft.potion.effect.sheep_potion": "sheep_potion",
+  "item.minecraft.splash_potion.effect.sheep_potion": "Splash sheep_potion",
+  "item.minecraft.lingering_potion.effect.sheep_potion": "Lingering sheep_potion",
+  "item.minecraft.tipped_arrow.effect.sheep_potion": "sheep_potion",
+
+  "item.minecraft.potion.effect.antidote_potion": "antidote_potion",
+  "item.minecraft.splash_potion.effect.antidote_potion": "Splash antidote_potion",
+  "item.minecraft.lingering_potion.effect.antidote_potion": "Lingering antidote_potion",
+  "item.minecraft.tipped_arrow.effect.antidote_potion": "antidote_potion"
+}

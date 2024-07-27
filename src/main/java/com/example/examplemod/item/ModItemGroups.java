@@ -18,6 +18,9 @@ public class ModItemGroups {
             .icon(() -> ModItem.RUBY.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ModItem.RUBY.get());
+                output.accept(ModItem.BREAD_SWORD_VERY_HOT.get());
+                output.accept(ModItem.BREAD_SWORD.get());
+                output.accept(ModItem.BREAD_SWORD_HOT.get());
             }).build());
 
     public static void registerModItemGroups(IEventBus eventBus){
