@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:pumpkin_pie"
+    },
+    "X": {
+      "item": "minecraft:pufferfish"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "result": {
+    "item": "mafishmod:stargazy_pie"
+  },
+  "show_notification": true
+}

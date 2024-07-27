@@ -1,0 +1,7 @@
+// 1.21	2024-07-27T14:06:10.383879	Recipes
+69da53a75999ba408f851396f232b2a0775481ab data/examplemod/advancement/recipes/food/bread_sword_hot_from_campfire_cooking.json
+3b9d545ce5d0f4e1156f9e5c89ebbceebf10187a data/examplemod/advancement/recipes/food/bread_sword_very_hot_from_campfire_cooking.json
+65a1475b5c07bd448257584b78b3b98a22f97177 data/examplemod/advancement/recipes/misc/bread_sword.json
+b180a2460078195f4ba249cdc49c5ccbbe362c02 data/examplemod/recipe/bread_sword.json
+8a666f1cab113af545a7b222decce1aa1daf2ef8 data/examplemod/recipe/bread_sword_hot_from_campfire_cooking.json
+5d308054b6e8f6d997ad2ee47b5bf76a7f152a56 data/examplemod/recipe/bread_sword_very_hot_from_campfire_cooking.json

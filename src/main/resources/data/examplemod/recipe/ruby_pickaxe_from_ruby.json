@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    " $ ",
+    " $ "
+  ],
+  "key": {
+    "#": {
+      "item":"mafishmod:ruby"
+    },
+    "$": {
+      "item":"minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mafishmod:ruby_pickaxe"
+  }
+}

@@ -4,12 +4,18 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.datagen.item.tags.ModBlockTagsProvider;
 import com.example.examplemod.datagen.item.tags.ModtemTagsProvider;
+import com.example.examplemod.datagen.recipe.ModRecipe;
 import com.ibm.icu.util.Output;
+import com.sun.jna.platform.win32.WinNT;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.data.tags.VanillaBlockTagsProvider;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -32,9 +38,16 @@ public class ModDataGenerator {
         // 为数据生成器添加一个自定义的数据包内置条目提供者
         generator.addProvider(event.includeServer(),new ModDatapackBuiltinEntriesProvider(output,lookupProvider));
 
+        generator.addProvider(event.includeServer(),new ModRecipe(output,lookupProvider));
         TagsProvider<Block> tagsprovider4 = generator.addProvider(event.includeServer(),new ModBlockTagsProvider(output,lookupProvider,ExampleMod.MODID,existingFileHelper));
         //
         generator.addProvider(event.includeServer(),new ModtemTagsProvider(output,lookupProvider,tagsprovider4.contentsGetter(),ExampleMod.MODID,existingFileHelper));
+
+
     }
+
+
+
+
 }
 

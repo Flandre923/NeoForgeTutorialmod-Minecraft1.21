@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:spyglass"
+    },
+    {
+      "item": "mafishmod:cool_glass"
+    }
+  ],
+  "result": {
+    "item": "mafishmod:apple_vision_pro"
+  }
+}
