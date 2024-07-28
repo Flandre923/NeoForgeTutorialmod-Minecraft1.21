@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.example.examplemod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AxeItemMixin",
+    "enchantmentitemmixin.throwableaxe.ItemEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
