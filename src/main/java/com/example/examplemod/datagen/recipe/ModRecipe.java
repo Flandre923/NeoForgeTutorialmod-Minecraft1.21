@@ -7,10 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.CampfireCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,6 +30,18 @@ public class ModRecipe extends RecipeProvider {
                 .save(recipeOutput);
 
         cookRecipes(recipeOutput, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new, 100);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItem.STONE_BALL.get())
+                .requires(Items.SNOWBALL)
+                .requires(Items.COBBLESTONE)
+                .unlockedBy("has_snowball",has(Items.SNOWBALL))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItem.TNT_BALL.get())
+                .requires(Items.SNOWBALL)
+                .requires(Items.TNT)
+                .unlockedBy("has_snowball",has(Items.TNT))
+                .save(recipeOutput);
 
     }
 

@@ -21,6 +21,8 @@ public class ModItemGroups {
                 output.accept(ModItem.BREAD_SWORD_VERY_HOT.get());
                 output.accept(ModItem.BREAD_SWORD.get());
                 output.accept(ModItem.BREAD_SWORD_HOT.get());
+                output.accept(ModItem.TNT_BALL.get());
+                output.accept(ModItem.STONE_BALL.get());
             }).build());
 
     public static void registerModItemGroups(IEventBus eventBus){
