@@ -1,6 +1,7 @@
 package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.block.ModBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -8,6 +9,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.spongepowered.asm.util.ObfuscationUtil;
 
 public class ModItemGroups {
 
@@ -23,6 +25,9 @@ public class ModItemGroups {
                 output.accept(ModItem.BREAD_SWORD_HOT.get());
                 output.accept(ModItem.TNT_BALL.get());
                 output.accept(ModItem.STONE_BALL.get());
+
+                // BLOCK
+                output.accept(ModBlock.GOLD_MELON.asItem());
             }).build());
 
     public static void registerModItemGroups(IEventBus eventBus){

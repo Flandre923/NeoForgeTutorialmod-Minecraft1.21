@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import com.example.examplemod.block.ModBlock;
 import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.ModItemGroups;
@@ -50,14 +51,14 @@ public class ExampleMod
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
+//    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
 //    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
 //    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
+//    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
 //    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
 
@@ -74,10 +75,11 @@ public class ExampleMod
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
+//        BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
 //        ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
+        ModBlock.register(modEventBus);
         ModItem.registerModItems(modEventBus);
         ModItemGroups.registerModItemGroups(modEventBus);
         ModEntities.register(modEventBus);
