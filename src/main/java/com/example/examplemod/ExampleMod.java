@@ -5,6 +5,7 @@ import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.ModItemGroups;
 import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
+import com.example.examplemod.render.itemModel.ItemModelEvent;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.entity.EntityType;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -135,6 +136,8 @@ public class ExampleMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            ItemModelEvent.registerZhuGeItemProperties();
         }
     }
 }

@@ -64,7 +64,4 @@ public abstract class ItemEntityMixin extends Entity implements TraceableEntity 
                 ? (byte) Mth.clamp(EnchantmentHelper.getTridentReturnToOwnerAcceleration(serverlevel, stack, this), 0, 127)
                 : 0;
     }
-
-
-
 }
