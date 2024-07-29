@@ -3,6 +3,8 @@ package com.example.examplemod.event;
 import com.example.examplemod.item.enchantment.ModEnchantmentHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +14,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingUseTotemEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import org.apache.logging.log4j.core.jmx.Server;
 
@@ -41,4 +44,6 @@ public class PlayerServerEvent {
             }
         }
     }
+
+
 }
