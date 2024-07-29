@@ -27,7 +27,7 @@ public class ModItemGroups {
                 output.accept(ModItem.STONE_BALL.get());
                 output.accept(ModItem.FU.get());
                 output.accept(ModItem.ZHU_GE.get());
-
+                output.accept(ModItem.POISON_SWORD.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
             }).build());
