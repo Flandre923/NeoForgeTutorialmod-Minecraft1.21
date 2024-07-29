@@ -18,4 +18,13 @@ public class Config
 {
     public static boolean isFuThrowable = true;
 
+    public static boolean isFireworkCanUseOnEntity = true;
+    public static  boolean isFireworkCanHitOnEntity = true;
+
+    public static boolean isFireworkCanUseOnEntity() {
+        return isFireworkCanUseOnEntity;
+    }
+    public static boolean isFireworkCanHitOnEntity() {
+        return isFireworkCanHitOnEntity;
+    }
 }
