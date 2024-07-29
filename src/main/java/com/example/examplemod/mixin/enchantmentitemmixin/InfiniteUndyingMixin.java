@@ -1,6 +1,7 @@
 package com.example.examplemod.mixin.enchantmentitemmixin;
 
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.DamageTypeTags;
@@ -14,11 +15,16 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+
+import java.util.stream.Collectors;
 
 @Mixin(LivingEntity.class)
 public abstract  class InfiniteUndyingMixin extends Entity implements Attackable {
@@ -53,7 +59,11 @@ public abstract  class InfiniteUndyingMixin extends Entity implements Attackable
                 ItemStack itemstack1 = this.getItemInHand(interactionhand);
                 if (itemstack1.is(Items.TOTEM_OF_UNDYING) && net.neoforged.neoforge.common.CommonHooks.onLivingUseTotem((LivingEntity)(Object)this, damageSource, itemstack1, interactionhand)) {
                     itemstack = itemstack1.copy();
-//                    itemstack1.shrink(1);
+//                    ItemEnchantments itemEnchantments = itemstack1.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+                    ItemEnchantments itemEnchantments = itemstack1.get(DataComponents.ENCHANTMENTS);
+                    if (itemEnchantments== null || !itemEnchantments.keySet().stream().map(holder->holder.getKey()).collect(Collectors.toSet()).contains(Enchantments.INFINITY)) {
+                        itemstack1.shrink(1);
+                    }
                     break;
                 }
             }
