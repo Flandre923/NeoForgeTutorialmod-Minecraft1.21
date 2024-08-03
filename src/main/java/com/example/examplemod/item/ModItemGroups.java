@@ -30,6 +30,9 @@ public class ModItemGroups {
                 output.accept(ModItem.POISON_SWORD.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
+                output.accept(ModBlock.POTATO_TNT.get());
+                output.accept(ModBlock.POTATO_TNT_PREPARE.get());
+                output.accept(ModBlock.WHATE_CAT_BLOCK.get());
             }).build());
 
     public static void registerModItemGroups(IEventBus eventBus){
