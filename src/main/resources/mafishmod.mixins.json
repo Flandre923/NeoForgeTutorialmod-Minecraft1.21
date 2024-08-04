@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AxeItemMixin",
+    "effectMixin.TeleportEffectMixin",
     "effectMixin.antidote.LivingEntityMixin",
     "effectMixin.canclimb.LivingEntityMixin",
     "effectMixin.canclimb.MobEntityMixin",
