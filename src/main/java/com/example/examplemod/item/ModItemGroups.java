@@ -28,6 +28,8 @@ public class ModItemGroups {
                 output.accept(ModItem.FU.get());
                 output.accept(ModItem.ZHU_GE.get());
                 output.accept(ModItem.POISON_SWORD.get());
+                output.accept(ModItem.LIGHTNING_BALL.get());
+                output.accept(ModItem.LIGHTNING_ITEM.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
                 output.accept(ModBlock.POTATO_TNT.get());

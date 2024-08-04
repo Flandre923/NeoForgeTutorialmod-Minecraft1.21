@@ -19,11 +19,15 @@ public class ModEntities {
     public static final DeferredHolder<EntityType<?>,EntityType<StoneBallProjectileEntity>> STONE_PROJECTILE = ENTITY_TYPES.register("stone_projectile",
             ()-> EntityType.Builder.<StoneBallProjectileEntity>of(StoneBallProjectileEntity::new, MobCategory.MISC).sized(0.25f,0.25f).build("stone_projectile"));
 
+
 //    public static final DeferredHolder<EntityType<?>,EntityType<FuProjectileEntity>> FU_PROJECTILE = ENTITY_TYPES.register("fu_projectile",
 //            ()-> EntityType.Builder.<FuProjectileEntity>of(TNTProjectileEntity::new, MobCategory.MISC).sized(0.25f,0.25f).build(null));
 
 //    public static final DeferredHolder<EntityType<?>,TNTProjectileEntity> FIREWORK_ARROW = ENTITY_TYPES.register("firework_arrow",
 //            ()-> EntityType.Builder.of())
+
+    public static final DeferredHolder<EntityType<?>,EntityType<LightningProjectileEntity>> LIGHTNING_PROJECTILE = ENTITY_TYPES.register("lightning_projectile",
+            ()-> EntityType.Builder.<LightningProjectileEntity>of(LightningProjectileEntity::new,MobCategory.MISC).sized(0.25f,0.25f).build("lightning_projectile"));
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }

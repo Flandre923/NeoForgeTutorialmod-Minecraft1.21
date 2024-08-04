@@ -16,5 +16,6 @@ public class ClientSetUp {
     {
         event.registerEntityRenderer(ModEntities.TNT_PROJECTILE.get(),ThrownItemRenderer::new);
         event.registerEntityRenderer(ModEntities.STONE_PROJECTILE.get(),ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.LIGHTNING_PROJECTILE.get(),ThrownItemRenderer::new);
     }
 }
