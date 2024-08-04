@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.example.examplemod.block.ModBlock;
+import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.ModItemGroups;
@@ -86,6 +87,7 @@ public class ExampleMod
         ModItemGroups.registerModItemGroups(modEventBus);
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
         //
         ModEnchantmentEffectComponents.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.

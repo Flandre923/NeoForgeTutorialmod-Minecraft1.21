@@ -3,6 +3,7 @@ package com.example.examplemod.datagen;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.datagen.item.tags.ModBlockTagsProvider;
+import com.example.examplemod.datagen.item.tags.ModEnchantmentTagsProvider;
 import com.example.examplemod.datagen.item.tags.ModtemTagsProvider;
 import com.example.examplemod.datagen.recipe.ModRecipe;
 import com.ibm.icu.util.Output;
@@ -42,6 +43,7 @@ public class ModDataGenerator {
         TagsProvider<Block> tagsprovider4 = generator.addProvider(event.includeServer(),new ModBlockTagsProvider(output,lookupProvider,ExampleMod.MODID,existingFileHelper));
         //
         generator.addProvider(event.includeServer(),new ModtemTagsProvider(output,lookupProvider,tagsprovider4.contentsGetter(),ExampleMod.MODID,existingFileHelper));
+        generator.addProvider(event.includeServer(),new ModEnchantmentTagsProvider(output,lookupProvider,existingFileHelper));
 
 
     }
