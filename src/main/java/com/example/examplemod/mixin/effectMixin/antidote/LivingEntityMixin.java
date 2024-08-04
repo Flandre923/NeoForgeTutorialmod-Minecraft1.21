@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin.antidote;
+package com.example.examplemod.mixin.effectMixin.antidote;
 
 import com.example.examplemod.effect.ModEffects;
 import net.minecraft.core.Holder;

@@ -4,7 +4,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AxeItemMixin",
-    "antidote.LivingEntityMixin",
+    "effectMixin.antidote.LivingEntityMixin",
+    "effectMixin.canclimb.LivingEntityMixin",
+    "effectMixin.canclimb.MobEntityMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
