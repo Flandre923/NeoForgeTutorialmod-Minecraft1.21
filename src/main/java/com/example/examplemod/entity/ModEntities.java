@@ -28,6 +28,8 @@ public class ModEntities {
 
     public static final DeferredHolder<EntityType<?>,EntityType<LightningProjectileEntity>> LIGHTNING_PROJECTILE = ENTITY_TYPES.register("lightning_projectile",
             ()-> EntityType.Builder.<LightningProjectileEntity>of(LightningProjectileEntity::new,MobCategory.MISC).sized(0.25f,0.25f).build("lightning_projectile"));
+
+
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }

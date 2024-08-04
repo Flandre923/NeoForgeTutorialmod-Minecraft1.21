@@ -6,6 +6,7 @@
     "AxeItemMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
+    "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
     "itemmixin.fireworkrocket.FireworkRocketHitOnEntityMixin",
     "itemmixin.fireworkrocket.FireworkRocketItemMixin"
