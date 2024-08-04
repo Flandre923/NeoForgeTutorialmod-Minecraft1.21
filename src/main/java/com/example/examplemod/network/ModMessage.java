@@ -1,6 +1,7 @@
 package com.example.examplemod.network;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.network.packet.C2S.SheepBreedingC2SPacket;
 import com.example.examplemod.network.packet.C2S.ThrowPowerC2SPacket;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -19,6 +20,16 @@ public class ModMessage {
                 new DirectionalPayloadHandler<>(
                         null,
                         ThrowPowerC2SPacket::handle
+                )
+        );
+
+
+        registrar.playBidirectional(
+                SheepBreedingC2SPacket.TYPE,
+                SheepBreedingC2SPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        null,
+                        SheepBreedingC2SPacket::handle
                 )
         );
 

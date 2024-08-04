@@ -7,6 +7,9 @@
     "effectMixin.antidote.LivingEntityMixin",
     "effectMixin.canclimb.LivingEntityMixin",
     "effectMixin.canclimb.MobEntityMixin",
+    "effectMixin.sheep.LimbAnimatorAccessor",
+    "effectMixin.sheep.LivingEntityMixin",
+    "effectMixin.sheep.PlayerEntityMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
@@ -15,6 +18,7 @@
     "itemmixin.fireworkrocket.FireworkRocketItemMixin"
   ],
   "client": [
+    "effectMixin.sheep.PlayerEntityRendererMixin",
     "itemmixin.entityitemrenderer.entityitemrenderer.lightningitemrenderer.ItemRendererMixin"
   ],
   "injectors": {
