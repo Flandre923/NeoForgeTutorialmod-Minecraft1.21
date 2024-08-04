@@ -11,6 +11,7 @@
     "itemmixin.fireworkrocket.FireworkRocketItemMixin"
   ],
   "client": [
+    "itemmixin.entityitemrenderer.entityitemrenderer.lightningitemrenderer.ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
