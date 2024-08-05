@@ -12,6 +12,8 @@
     "effectMixin.sheep.LivingEntityMixin",
     "effectMixin.sheep.PlayerEntityMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
+    "enchantmentitemmixin.custom.badluckofsea.FallingBlockEntityMixin",
+    "enchantmentitemmixin.custom.badluckofsea.FlowableFluidMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",

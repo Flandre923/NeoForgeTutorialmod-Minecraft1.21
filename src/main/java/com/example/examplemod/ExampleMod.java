@@ -9,6 +9,7 @@ import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
 import com.example.examplemod.render.itemModel.ItemModelEvent;
 import com.example.examplemod.sound.ModSounds;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.EntityType;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.slf4j.Logger;
@@ -88,6 +89,8 @@ public class ExampleMod
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
+        // 获得服务器实例
+
         //
         ModEnchantmentEffectComponents.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.

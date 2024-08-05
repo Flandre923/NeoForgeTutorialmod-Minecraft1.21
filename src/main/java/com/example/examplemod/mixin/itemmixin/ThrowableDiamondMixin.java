@@ -29,20 +29,23 @@ public class ThrowableDiamondMixin {
     public void init(Level level, Player player, InteractionHand usedHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir){
         ItemStack itemStack = player.getItemInHand(usedHand);
         if (itemStack.getItem() == Items.DIAMOND){
-            sendC2S();
-        }
-        level.playSound(null,player.getX(),player.getYRot(),player.getZ(),
-                SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL,0.5f,0.4f/(level.getRandom().nextFloat() * 0.4f + 0.8f));
 
-        if (!level.isClientSide) {
-            DiamondProjectileEntity diamondProjectileEntity = new DiamondProjectileEntity(player, level);
-            diamondProjectileEntity.setItem(itemStack);
-            diamondProjectileEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, ThrowPowerC2SPacket.throw_power, 1.0f);
-            level.addFreshEntity(diamondProjectileEntity);
-        }
+            if (level.isClientSide){
+                sendC2S();
+            }
+            level.playSound(null,player.getX(),player.getYRot(),player.getZ(),
+                    SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL,0.5f,0.4f/(level.getRandom().nextFloat() * 0.4f + 0.8f));
 
-        player.awardStat(Stats.ITEM_USED.get(itemStack.getItem()));
-        itemStack.consume(1, player);
+            if (!level.isClientSide) {
+                DiamondProjectileEntity diamondProjectileEntity = new DiamondProjectileEntity(player, level);
+                diamondProjectileEntity.setItem(itemStack);
+                diamondProjectileEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, ThrowPowerC2SPacket.throw_power, 1.0f);
+                level.addFreshEntity(diamondProjectileEntity);
+            }
+
+            player.awardStat(Stats.ITEM_USED.get(itemStack.getItem()));
+            itemStack.consume(1, player);
+        }
     }
 
 
