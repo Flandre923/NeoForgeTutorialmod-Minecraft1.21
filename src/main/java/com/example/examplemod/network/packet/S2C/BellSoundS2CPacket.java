@@ -54,6 +54,6 @@ public class BellSoundS2CPacket implements CustomPacketPayload {
 
     @Override
     public Type<? extends CustomPacketPayload> type() {
-        return null;
+        return TYPE;
     }
 }
