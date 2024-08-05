@@ -5,12 +5,14 @@ import com.example.examplemod.network.packet.C2S.GameOptionsC2SPacket;
 import com.example.examplemod.network.packet.C2S.SheepBreedingC2SPacket;
 import com.example.examplemod.network.packet.C2S.ThrowPowerC2SPacket;
 import com.example.examplemod.network.packet.S2C.BellSoundS2CPacket;
+import com.example.examplemod.network.packet.S2C.NeverGonnaS2CPacket;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
+import org.checkerframework.checker.units.qual.N;
 
 @EventBusSubscriber(modid = ExampleMod.MODID,bus = EventBusSubscriber.Bus.MOD)
 public class ModMessage {
@@ -45,13 +47,22 @@ public class ModMessage {
                 )
         );
 
-        // server
+        // server to client
 
         registrar.playBidirectional(
                 BellSoundS2CPacket.TYPE,
                 BellSoundS2CPacket.STREAM_CODEC,
                 new DirectionalPayloadHandler<>(
                         BellSoundS2CPacket::handle,
+                        null
+                )
+        );
+
+        registrar.playBidirectional(
+                NeverGonnaS2CPacket.TYPE,
+                NeverGonnaS2CPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<NeverGonnaS2CPacket>(
+                        NeverGonnaS2CPacket::handle,
                         null
                 )
         );
