@@ -1,8 +1,11 @@
 package com.example.examplemod.network;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.network.packet.C2S.GameOptionsC2SPacket;
 import com.example.examplemod.network.packet.C2S.SheepBreedingC2SPacket;
 import com.example.examplemod.network.packet.C2S.ThrowPowerC2SPacket;
+import com.example.examplemod.network.packet.S2C.BellSoundS2CPacket;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -32,6 +35,28 @@ public class ModMessage {
                         SheepBreedingC2SPacket::handle
                 )
         );
+
+        registrar.playBidirectional(
+                GameOptionsC2SPacket.TYPE,
+                GameOptionsC2SPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<GameOptionsC2SPacket>(
+                        null,
+                        GameOptionsC2SPacket::handle
+                )
+        );
+
+        // server
+
+        registrar.playBidirectional(
+                BellSoundS2CPacket.TYPE,
+                BellSoundS2CPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        BellSoundS2CPacket::handle,
+                        null
+                )
+        );
+
+
 
     }
 }

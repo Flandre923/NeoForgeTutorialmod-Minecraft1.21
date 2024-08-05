@@ -2,6 +2,7 @@ package com.example.examplemod.event;
 
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.enchantment.ModEnchantmentHelper;
+import com.example.examplemod.mixinhelper.BellBlockDelayMixinHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
@@ -51,8 +53,6 @@ public class PlayerServerEvent {
         }
     }
 
-
-
     @SubscribeEvent
     public static void onEntityAttack(AttackEntityEvent event){
         Player player = event.getEntity();
@@ -74,6 +74,15 @@ public class PlayerServerEvent {
             player.sendSystemMessage(Component.literal("哎呦你干嘛"));
         }
 
+    }
+
+    @SubscribeEvent
+    public static void onPlayerDisConnection(EntityLeaveLevelEvent event){
+        //客户端已经成功连接到服务器
+        // 清空hashmap
+        BellBlockDelayMixinHelper.BellBlockEntityMap.clear();
+        BellBlockDelayMixinHelper.HitCoolDownMap.clear();
+        BellBlockDelayMixinHelper.DirectionMap.clear();
     }
 
 

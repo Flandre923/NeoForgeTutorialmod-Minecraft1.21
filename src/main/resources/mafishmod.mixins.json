@@ -14,6 +14,8 @@
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.custom.badluckofsea.FallingBlockEntityMixin",
     "enchantmentitemmixin.custom.badluckofsea.FlowableFluidMixin",
+    "enchantmentitemmixin.custom.bellknockbackandhurt.BellBlockEntityMixin",
+    "enchantmentitemmixin.custom.bellresonance.BellBlockEntityMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
