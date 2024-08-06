@@ -27,6 +27,7 @@
     "enchantmentblockmixin.custom.knockback.LivingEntityMixin",
     "enchantmentblockmixin.custom.knockback.NetherPortalBlockMixin",
     "enchantmentblockmixin.custom.knockback.TripwireBlockMixin",
+    "enchantmentblockmixin.custom.punchtrapdoor.TrapdoorBlockMixin",
     "enchantmentblockmixin.main.BlockMixin",
     "enchantmentblockmixin.main.BrushItemMixin",
     "enchantmentblockmixin.main.PistonBlockMixin",
