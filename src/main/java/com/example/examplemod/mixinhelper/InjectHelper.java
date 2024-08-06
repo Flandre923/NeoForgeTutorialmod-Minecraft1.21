@@ -7,12 +7,14 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 
@@ -54,4 +56,16 @@ public class InjectHelper {
         ListTag listTag = enchantmentsToNbtList(itemStack,currentPos);
         BlockEnchantmentStorage.addBlockEnchantment(currentPos, listTag);
     }
+
+
+
+    public static int getEnchantmentLevel(ItemStack item, ResourceKey<Enchantment> enchantmentResourceKey){
+        ItemEnchantments itemEnchantments = item.get(DataComponents.ENCHANTMENTS);
+        if (itemEnchantments == null) {
+            return -1;
+        }
+        Optional<Object2IntMap.Entry<Holder<Enchantment>>> levelOptional = itemEnchantments.entrySet().stream().filter(int2Enchatment -> int2Enchatment.getKey().is(enchantmentResourceKey)).findFirst();
+        return levelOptional.map(Object2IntMap.Entry::getIntValue).orElse(-1);
+    }
+
 }

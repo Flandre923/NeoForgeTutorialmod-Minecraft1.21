@@ -19,6 +19,7 @@
     "enchantmentblockmixin.custom.buttonrandom.PlayerEntityMixin",
     "enchantmentblockmixin.custom.fallprotection.BlockMixin",
     "enchantmentblockmixin.custom.fasthopper.HopperBlockEntityMixin",
+    "enchantmentblockmixin.custom.furnace.AbstractFurnaceBlockEntityMixin",
     "enchantmentblockmixin.main.BlockMixin",
     "enchantmentblockmixin.main.BrushItemMixin",
     "enchantmentblockmixin.main.PistonBlockMixin",
