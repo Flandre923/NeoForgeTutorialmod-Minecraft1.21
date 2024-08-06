@@ -30,6 +30,7 @@
     "enchantmentblockmixin.custom.punchtrapdoor.TrapdoorBlockMixin",
     "enchantmentblockmixin.custom.respiration.FlowableFluidMixin",
     "enchantmentblockmixin.custom.targetblock.TargetBlockMixin",
+    "enchantmentblockmixin.custom.thorns.AbstractBlockMixin",
     "enchantmentblockmixin.main.BlockMixin",
     "enchantmentblockmixin.main.BrushItemMixin",
     "enchantmentblockmixin.main.PistonBlockMixin",
