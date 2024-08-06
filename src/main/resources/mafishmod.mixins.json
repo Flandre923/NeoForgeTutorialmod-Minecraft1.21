@@ -32,6 +32,7 @@
     "enchantmentblockmixin.custom.targetblock.TargetBlockMixin",
     "enchantmentblockmixin.custom.thorns.AbstractBlockMixin",
     "enchantmentblockmixin.custom.thorns.BlockMixin",
+    "enchantmentblockmixin.custom.tnt.TntBlockMixin",
     "enchantmentblockmixin.main.BlockMixin",
     "enchantmentblockmixin.main.BrushItemMixin",
     "enchantmentblockmixin.main.PistonBlockMixin",
