@@ -39,7 +39,6 @@ public class BreadSwordVeryHotItem extends SwordItem {
         ItemEnchantments itemenchantments = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         Set<Object2IntMap.Entry<Holder<Enchantment>>> enchantments = itemenchantments.entrySet();
         if (enchantments.isEmpty()){
-
             RegistryAccess registryAccess = level.registryAccess();
             Optional<HolderLookup.RegistryLookup<Enchantment>> enchantmentGetter = registryAccess.lookup(Registries.ENCHANTMENT);
             Optional<Holder.Reference<Enchantment>> enchantmentReference = enchantmentGetter.get().get(Enchantments.FIRE_ASPECT);

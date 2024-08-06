@@ -45,6 +45,7 @@ import net.neoforged.neoforge.common.util.TriState;
 import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
@@ -261,6 +262,21 @@ public class PlayerServerEvent {
                     BlockEnchantmentStorage.removeBlockEnchantment(currentPos);
 //                    ExampleMod.LOGGER.info("Found block: " + blockState.getBlock().getTranslationKey() + " at " + currentPos);
                 }
+            }
+        }
+    }
+
+
+    public static boolean isButtonUsed = false;
+    @SubscribeEvent
+    public static void UseBlockHandler(UseItemOnBlockEvent event){
+        Level level = event.getLevel();
+        BlockPos pos = event.getPos();
+        BlockState state = level.getBlockState(pos);
+        if (!level.isClientSide)
+        {
+            if(state.is(BlockTags.BUTTONS)){
+                isButtonUsed = true;
             }
         }
     }
