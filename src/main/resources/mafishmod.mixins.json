@@ -18,6 +18,7 @@
     "enchantmentblockmixin.custom.blastprotection.ExplosionBehaviorMixin",
     "enchantmentblockmixin.custom.buttonrandom.PlayerEntityMixin",
     "enchantmentblockmixin.custom.fallprotection.BlockMixin",
+    "enchantmentblockmixin.custom.fasthopper.HopperBlockEntityMixin",
     "enchantmentblockmixin.main.BlockMixin",
     "enchantmentblockmixin.main.BrushItemMixin",
     "enchantmentblockmixin.main.PistonBlockMixin",
