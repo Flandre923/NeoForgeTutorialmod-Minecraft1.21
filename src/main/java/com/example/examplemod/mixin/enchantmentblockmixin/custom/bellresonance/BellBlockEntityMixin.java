@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin.enchantmentitemmixin.custom.bellresonance;
+package com.example.examplemod.mixin.enchantmentblockmixin.custom.bellresonance;
 
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.enchantmentblock.BlockEnchantmentStorage;
@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.entity.BellBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import org.checkerframework.common.value.qual.MinLen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

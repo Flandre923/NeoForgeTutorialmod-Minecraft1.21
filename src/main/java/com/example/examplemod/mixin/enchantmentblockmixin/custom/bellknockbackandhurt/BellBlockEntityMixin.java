@@ -1,11 +1,10 @@
-package com.example.examplemod.mixin.enchantmentitemmixin.custom.bellknockbackandhurt;
+package com.example.examplemod.mixin.enchantmentblockmixin.custom.bellknockbackandhurt;
 
 import com.example.examplemod.enchantmentblock.BlockEnchantmentStorage;
 import com.example.examplemod.network.packet.C2S.GameOptionsC2SPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.Enchantments;

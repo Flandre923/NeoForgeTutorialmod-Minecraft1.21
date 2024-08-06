@@ -1,6 +1,8 @@
 package com.example.examplemod.event;
 
+import com.example.examplemod.ExampleMod;
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
+import com.example.examplemod.enchantmentblock.BlockEnchantmentStorage;
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.enchantment.ModEnchantmentHelper;
 import com.example.examplemod.mixinhelper.BellBlockDelayMixinHelper;
@@ -10,6 +12,8 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -18,6 +22,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
@@ -29,6 +34,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
@@ -41,10 +48,8 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Timer;
-import java.util.TimerTask;
+import javax.xml.crypto.Data;
+import java.util.*;
 
 @EventBusSubscriber
 public class PlayerServerEvent {
@@ -97,8 +102,8 @@ public class PlayerServerEvent {
 
 
     @SubscribeEvent
-    public static void onPlayerAttackBlock(PlayerInteractEvent.LeftClickBlock event){
-        Player player = event.getEntity();
+    public static void onPlayerAttackBlock(BlockEvent.BreakEvent event){
+        Player player = event.getPlayer();
         BlockPos useBlock = event.getPos();
         BlockState state = player.level().getBlockState(useBlock);
 
@@ -156,4 +161,107 @@ public class PlayerServerEvent {
     }
 
 
+    @SubscribeEvent
+    public static void onPlayerAttack(PlayerInteractEvent.LeftClickBlock event){
+        BlockPos startPos = null;
+
+        Player player = event.getEntity();
+        Level world  = event.getLevel();
+        InteractionHand hand = event.getHand();
+        BlockPos pos = event.getPos();
+        if(!world.isClientSide) {
+            Iterable<ItemStack> handItemStacks = player.getAllSlots();
+            for (ItemStack itemstack : handItemStacks) {
+                if (itemstack.is(Items.BRUSH)) {
+                    if (itemstack.isEnchanted()) {//有附魔，全图获取
+                        if (startPos == null) {
+                            startPos = pos ;
+                        } else {
+                            brushAllBlocks(world,startPos, pos, itemstack);
+                            startPos = null;
+                        }
+                    } else {//没附魔，清除附魔方块
+                        if (startPos == null) {
+                            startPos = pos;
+                        } else {
+                            clearAllBlocks(world,startPos, pos);
+                            startPos = null;
+                        }
+                    }
+//                    return InteractionResult.SUCCESS;
+                }
+            }
+        }
+//        return ActionResult.PASS;
+    }
+
+
+    private static void brushAllBlocks(Level world, BlockPos startPos, BlockPos pos, ItemStack itemStack) {
+        // 获取立方体对角方块的坐标
+        int minX = Math.min(startPos.getX(), pos.getX());
+        int minY = Math.min(startPos.getY(), pos.getY());
+        int minZ = Math.min(startPos.getZ(), pos.getZ());
+        int maxX = Math.max(startPos.getX(), pos.getX());
+        int maxY = Math.max(startPos.getY(), pos.getY());
+        int maxZ = Math.max(startPos.getZ(), pos.getZ());
+
+        // 遍历立方体内的所有方块
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
+                for (int z = minZ; z <= maxZ; z++) {
+                    BlockPos currentPos = new BlockPos(x, y, z);
+                    BlockState blockState = world.getBlockState(currentPos);
+
+                    // 排除空气、水、岩浆等特定方块
+                    if (blockState.is(Blocks.AIR) ||
+                            blockState.is(Blocks.WATER) ||
+                            blockState.is(Blocks.LAVA)) {
+                        continue;
+                    }
+
+                    // 在这里对满足条件的方块进行处理
+                    ItemEnchantments itemEnchantments = itemStack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+
+                    ListTag enchantmentNbtList = new ListTag();
+                    Set<Object2IntMap.Entry<Holder<Enchantment>>> entries = itemEnchantments.entrySet();
+                    for (Object2IntMap.Entry<Holder<Enchantment>> entry : entries) {
+                        Holder<Enchantment> key = entry.getKey();
+                        int intValue = entry.getIntValue();
+
+
+                        CompoundTag enchantmentNbt = new CompoundTag();
+                        enchantmentNbt.putString("id",String.valueOf(key.getKey()));
+                        enchantmentNbt.putInt("lvl",intValue);
+                        enchantmentNbtList.add(enchantmentNbt);
+
+                    }
+                    BlockEnchantmentStorage.addBlockEnchantment(currentPos, enchantmentNbtList);
+                }
+            }
+        }
+    }
+
+    private static void clearAllBlocks(Level world,BlockPos startPos, BlockPos pos) {
+        // 获取立方体对角方块的坐标
+        int minX = Math.min(startPos.getX(), pos.getX());
+        int minY = Math.min(startPos.getY(), pos.getY());
+        int minZ = Math.min(startPos.getZ(), pos.getZ());
+        int maxX = Math.max(startPos.getX(), pos.getX());
+        int maxY = Math.max(startPos.getY(), pos.getY());
+        int maxZ = Math.max(startPos.getZ(), pos.getZ());
+
+        // 遍历立方体内的所有方块
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
+                for (int z = minZ; z <= maxZ; z++) {
+                    BlockPos currentPos = new BlockPos(x, y, z);
+                    BlockState blockState = world.getBlockState(currentPos);
+
+                    // 在这里对满足条件的方块进行处理
+                    BlockEnchantmentStorage.removeBlockEnchantment(currentPos);
+//                    ExampleMod.LOGGER.info("Found block: " + blockState.getBlock().getTranslationKey() + " at " + currentPos);
+                }
+            }
+        }
+    }
 }

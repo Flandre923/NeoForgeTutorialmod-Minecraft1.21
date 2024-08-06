@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin.enchantmentitemmixin.custom.badluckofsea;
+package com.example.examplemod.mixin.enchantmentblockmixin.custom.badluckofsea;
 
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.enchantmentblock.BlockEnchantmentStorage;

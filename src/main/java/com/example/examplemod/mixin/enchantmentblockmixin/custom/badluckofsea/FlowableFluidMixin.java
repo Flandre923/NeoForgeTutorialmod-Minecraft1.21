@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin.enchantmentitemmixin.custom.badluckofsea;
+package com.example.examplemod.mixin.enchantmentblockmixin.custom.badluckofsea;
 
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.enchantmentblock.BlockEnchantmentStorage;
@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FlowingFluid;
-import org.checkerframework.common.value.qual.MinLen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
