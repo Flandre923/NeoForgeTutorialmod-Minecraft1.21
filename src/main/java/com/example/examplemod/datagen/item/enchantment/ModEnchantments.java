@@ -500,6 +500,23 @@ public class ModEnchantments {
                         )
                 )
         );
+
+
+        register(
+                context,
+                RESONANCE,
+                Enchantment.enchantment(
+                        Enchantment.definition(
+                                holdergetter2.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
+                                2,
+                                1,
+                                Enchantment.constantCost(25),
+                                Enchantment.constantCost(50),
+                                8,
+                                EquipmentSlotGroup.ANY
+                        )
+                )
+        );
         // ******************
     }
 
