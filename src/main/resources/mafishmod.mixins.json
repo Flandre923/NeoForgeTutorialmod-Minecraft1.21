@@ -50,6 +50,7 @@
     "enchantmentblockmixin.main.sigleinject.TripwireHookBlockMixin",
     "enchantmentitemmixin.AlwaysEnchantableMixin",
     "enchantmentitemmixin.ArmorEnchantmentMixin",
+    "enchantmentitemmixin.BadLuckOfSeaItemEntityMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.bowleft.AbstractSkeletonEntityMixin",
     "enchantmentitemmixin.bowleft.BowItemMixin",
