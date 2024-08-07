@@ -54,6 +54,8 @@
     "enchantmentitemmixin.bowleft.BowItemMixin",
     "enchantmentitemmixin.bowloyalty.PersistentProjectileEntityMixin",
     "enchantmentitemmixin.elytra.PlayerEntityMixin",
+    "enchantmentitemmixin.enderpearl.EnderPearlEntityMixin",
+    "enchantmentitemmixin.enderpearl.EnderPearlItemMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
