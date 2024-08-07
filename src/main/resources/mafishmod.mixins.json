@@ -56,6 +56,7 @@
     "enchantmentitemmixin.elytra.PlayerEntityMixin",
     "enchantmentitemmixin.enderpearl.EnderPearlEntityMixin",
     "enchantmentitemmixin.enderpearl.EnderPearlItemMixin",
+    "enchantmentitemmixin.fangsheng.ItemEntityMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",

@@ -1,6 +1,7 @@
 package com.example.examplemod.network;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.network.packet.C2S.FuC2SPacket;
 import com.example.examplemod.network.packet.C2S.GameOptionsC2SPacket;
 import com.example.examplemod.network.packet.C2S.SheepBreedingC2SPacket;
 import com.example.examplemod.network.packet.C2S.ThrowPowerC2SPacket;
@@ -44,6 +45,15 @@ public class ModMessage {
                 new DirectionalPayloadHandler<GameOptionsC2SPacket>(
                         null,
                         GameOptionsC2SPacket::handle
+                )
+        );
+
+        registrar.playBidirectional(
+                FuC2SPacket.TYPE,
+                FuC2SPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        null,
+                        FuC2SPacket::handle
                 )
         );
 
