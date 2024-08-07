@@ -48,6 +48,7 @@
     "enchantmentblockmixin.main.sigleinject.StructureBlockMixin",
     "enchantmentblockmixin.main.sigleinject.TallPlantBlockMixin",
     "enchantmentblockmixin.main.sigleinject.TripwireHookBlockMixin",
+    "enchantmentitemmixin.AlwaysEnchantableMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.bowleft.AbstractSkeletonEntityMixin",
     "enchantmentitemmixin.bowleft.BowItemMixin",

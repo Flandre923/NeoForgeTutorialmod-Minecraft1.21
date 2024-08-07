@@ -17,6 +17,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class Config
 {
     public static boolean isFuThrowable = true;
+    public static boolean isAlwaysEnchantable = true;
 
     public static boolean isFireworkCanUseOnEntity = true;
     public static  boolean isFireworkCanHitOnEntity = true;
@@ -26,5 +27,10 @@ public class Config
     }
     public static boolean isFireworkCanHitOnEntity() {
         return isFireworkCanHitOnEntity;
+    }
+
+
+    public static boolean isAlwaysEnchantable() {
+        return isAlwaysEnchantable;
     }
 }
