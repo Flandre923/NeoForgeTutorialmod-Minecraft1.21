@@ -30,6 +30,7 @@ public class ModItemGroups {
                 output.accept(ModItem.POISON_SWORD.get());
                 output.accept(ModItem.LIGHTNING_BALL.get());
                 output.accept(ModItem.LIGHTNING_ITEM.get());
+                output.accept(ModItem.CHEESE_BERGER.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
                 output.accept(ModBlock.POTATO_TNT.get());
