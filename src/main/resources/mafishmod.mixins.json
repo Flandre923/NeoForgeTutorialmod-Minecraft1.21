@@ -53,6 +53,8 @@
     "enchantmentitemmixin.BadLuckOfSeaItemEntityMixin",
     "enchantmentitemmixin.GongXiFaCaiMixin",
     "enchantmentitemmixin.HorseSaddleEnchantmentMixin",
+    "enchantmentitemmixin.InfiniteBucketMixin$InFiniteBucketMixin",
+    "enchantmentitemmixin.InfiniteFoodMixin$InFiniteFoodMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.ReverseMixin",
     "enchantmentitemmixin.WeaponEnchantmentMixin",
