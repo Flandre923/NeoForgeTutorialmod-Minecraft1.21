@@ -60,6 +60,7 @@
     "enchantmentitemmixin.luoyangshovel.FallingBlockEntityMixin",
     "enchantmentitemmixin.luoyangshovel.ShovelItemMixin",
     "enchantmentitemmixin.multishot_trident.TridentItemMixin",
+    "enchantmentitemmixin.slimefeet.BlockMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
