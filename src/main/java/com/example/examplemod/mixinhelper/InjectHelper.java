@@ -60,6 +60,9 @@ public class InjectHelper {
 
 
     public static int getEnchantmentLevel(ItemStack item, ResourceKey<Enchantment> enchantmentResourceKey){
+        if (item == null){
+            return 0;
+        }
         ItemEnchantments itemEnchantments = item.get(DataComponents.ENCHANTMENTS);
         if (itemEnchantments == null) {
             return -1;
