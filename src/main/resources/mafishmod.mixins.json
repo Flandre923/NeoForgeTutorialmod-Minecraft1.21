@@ -3,7 +3,6 @@
   "package": "com.example.examplemod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AxeItemMixin",
     "effectMixin.TeleportEffectMixin",
     "effectMixin.antidote.LivingEntityMixin",
     "effectMixin.canclimb.LivingEntityMixin",
@@ -61,6 +60,8 @@
     "enchantmentitemmixin.luoyangshovel.ShovelItemMixin",
     "enchantmentitemmixin.multishot_trident.TridentItemMixin",
     "enchantmentitemmixin.slimefeet.BlockMixin",
+    "enchantmentitemmixin.slippery.UnPickUpAbleItemMixin",
+    "enchantmentitemmixin.throwableaxe.AxeItemMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
@@ -69,6 +70,8 @@
   ],
   "client": [
     "effectMixin.sheep.PlayerEntityRendererMixin",
+    "enchantmentitemmixin.slippery.HandledScreenMixin",
+    "enchantmentitemmixin.slippery.InventoryScreenMixin",
     "itemmixin.entityitemrenderer.entityitemrenderer.lightningitemrenderer.ItemRendererMixin"
   ],
   "injectors": {

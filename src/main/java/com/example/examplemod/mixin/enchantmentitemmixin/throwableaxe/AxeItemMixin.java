@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin;
+package com.example.examplemod.mixin.enchantmentitemmixin.throwableaxe;
 
 import com.example.examplemod.Config;
 import com.example.examplemod.entity.FuProjectileEntity;
