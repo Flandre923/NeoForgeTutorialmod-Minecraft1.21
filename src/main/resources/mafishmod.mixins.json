@@ -84,7 +84,10 @@
     "effectMixin.sheep.PlayerEntityRendererMixin",
     "enchantmentitemmixin.slippery.HandledScreenMixin",
     "enchantmentitemmixin.slippery.InventoryScreenMixin",
-    "itemmixin.entityitemrenderer.entityitemrenderer.lightningitemrenderer.ItemRendererMixin"
+    "itemmixin.entityitemrenderer.irongolemitemrenderer.ItemRendererMixin",
+    "itemmixin.entityitemrenderer.lightningitemrenderer.ItemRendererMixin",
+    "itemmixin.entityitemrenderer.llamaitemrenderer.ItemRendererMixin",
+    "itemmixin.entityitemrenderer.villageritemrenderer.ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
