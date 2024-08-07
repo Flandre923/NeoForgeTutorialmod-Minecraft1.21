@@ -55,6 +55,7 @@
     "enchantmentitemmixin.HorseSaddleEnchantmentMixin",
     "enchantmentitemmixin.InfiniteBucketMixin$InFiniteBucketMixin",
     "enchantmentitemmixin.InfiniteFoodMixin$InFiniteFoodMixin",
+    "enchantmentitemmixin.InfinitePickaxeItemMixin",
     "enchantmentitemmixin.InfiniteUndyingMixin",
     "enchantmentitemmixin.ReverseMixin",
     "enchantmentitemmixin.WeaponEnchantmentMixin",
