@@ -57,6 +57,8 @@
     "enchantmentitemmixin.enderpearl.EnderPearlEntityMixin",
     "enchantmentitemmixin.enderpearl.EnderPearlItemMixin",
     "enchantmentitemmixin.fangsheng.ItemEntityMixin",
+    "enchantmentitemmixin.luoyangshovel.FallingBlockEntityMixin",
+    "enchantmentitemmixin.luoyangshovel.ShovelItemMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
