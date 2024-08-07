@@ -21,6 +21,7 @@ public class Config
 
     public static boolean isFireworkCanUseOnEntity = true;
     public static  boolean isFireworkCanHitOnEntity = true;
+    public static boolean isShieldDashable = true;
 
     public static boolean isFireworkCanUseOnEntity() {
         return isFireworkCanUseOnEntity;
@@ -29,6 +30,9 @@ public class Config
         return isFireworkCanHitOnEntity;
     }
 
+    public static boolean isShieldDashable() {
+        return isShieldDashable;
+    }
 
     public static boolean isAlwaysEnchantable() {
         return isAlwaysEnchantable;

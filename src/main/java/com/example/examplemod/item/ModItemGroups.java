@@ -31,6 +31,8 @@ public class ModItemGroups {
                 output.accept(ModItem.LIGHTNING_BALL.get());
                 output.accept(ModItem.LIGHTNING_ITEM.get());
                 output.accept(ModItem.CHEESE_BERGER.get());
+                output.accept(ModItem.COLLIABLE.get());
+                output.accept(ModItem.MATH_SWORD.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
                 output.accept(ModBlock.POTATO_TNT.get());

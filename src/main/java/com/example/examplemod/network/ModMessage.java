@@ -1,10 +1,7 @@
 package com.example.examplemod.network;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.network.packet.C2S.FuC2SPacket;
-import com.example.examplemod.network.packet.C2S.GameOptionsC2SPacket;
-import com.example.examplemod.network.packet.C2S.SheepBreedingC2SPacket;
-import com.example.examplemod.network.packet.C2S.ThrowPowerC2SPacket;
+import com.example.examplemod.network.packet.C2S.*;
 import com.example.examplemod.network.packet.S2C.BellSoundS2CPacket;
 import com.example.examplemod.network.packet.S2C.NeverGonnaS2CPacket;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -56,6 +53,17 @@ public class ModMessage {
                         FuC2SPacket::handle
                 )
         );
+
+        registrar.playBidirectional(
+                ShieldDashC2SPacket.TYPE,
+                ShieldDashC2SPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        null,
+                        ShieldDashC2SPacket::handle
+                )
+        );
+
+
 
         // server to client
 

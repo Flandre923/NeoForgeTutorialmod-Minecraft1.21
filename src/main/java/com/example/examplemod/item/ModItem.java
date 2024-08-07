@@ -30,6 +30,10 @@ public class ModItem {
             ()-> new LightningItem(Tiers.NETHERITE,new Item.Properties().fireResistant().stacksTo(1)));
     public static final DeferredItem<Item> CHEESE_BERGER = registerItem("cheese_berger",
             ()-> new CheeseBergerItem(new Item.Properties().food(ModFoodComponents.CHEESE_BERGER)));
+    public static final DeferredItem<Item> COLLIABLE = registerItem("colliable",
+            ()-> new ColliableItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> MATH_SWORD = registerItem("math_sword",
+            ()-> new MathSwordItem(Tiers.NETHERITE, new Item.Properties()));
     public static final DeferredItem<Item> FU = registerItem("fu",FuItem::new);
     public static DeferredItem<Item> registerItem(String name, Supplier<Item> itemSupplier){
         return ITEMS.register(name,itemSupplier);

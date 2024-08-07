@@ -73,6 +73,8 @@
     "enchantmentitemmixin.slippery.UnPickUpAbleItemMixin",
     "enchantmentitemmixin.throwableaxe.AxeItemMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
+    "itemmixin.MathModeMixin",
+    "itemmixin.ShieldDashMixin",
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
     "itemmixin.fireworkrocket.FireworkRocketHitOnEntityMixin",
