@@ -98,6 +98,19 @@ public class PlayerServerEvent {
             player.sendSystemMessage(Component.literal("哎呦你干嘛"));
         }
 
+        //TODO VR
+//        if(!world.isClient && VrMagicItem.isUsingMagic){
+//            BlockPos blockPos = entity.getBlockPos();
+//            LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(entity.getWorld());
+//            if (lightningEntity != null) {
+//                lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
+//                lightningEntity.setChanneler(player instanceof ServerPlayerEntity ? (ServerPlayerEntity) player : null);
+//                entity.getWorld().spawnEntity(lightningEntity);
+//                SoundEvent soundEvent = SoundEvents.ITEM_TRIDENT_THUNDER;
+//                entity.playSound(soundEvent, 5, 1.0F);
+//            }
+//            entity.kill();
+//        }
     }
 
 
