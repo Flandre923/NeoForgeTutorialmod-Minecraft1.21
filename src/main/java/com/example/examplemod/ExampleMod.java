@@ -7,6 +7,7 @@ import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.ModItemGroups;
 import com.example.examplemod.item.component.ModDataComponents;
 import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
+import com.example.examplemod.potion.ModPotions;
 import com.example.examplemod.render.itemModel.ItemModelEvent;
 import com.example.examplemod.sound.ModSounds;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -91,6 +92,7 @@ public class ExampleMod
         ModSounds.register(modEventBus);
         ModDataComponents.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
         // 获得服务器实例
 
         //
