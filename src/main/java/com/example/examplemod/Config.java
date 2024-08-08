@@ -49,4 +49,8 @@ public class Config
     public static boolean isLeadCanLinkEveryMob() {
         return true;
     }
+
+    public static boolean isSpyglassCanPin() {
+        return true;
+    }
 }
