@@ -280,6 +280,9 @@ public class PlayerServerEvent {
     }
 
 
+    /**
+     *  UseBlockHandler
+     */
     public static boolean isButtonUsed = false;
     @SubscribeEvent
     public static void UseBlockHandler(UseItemOnBlockEvent event){

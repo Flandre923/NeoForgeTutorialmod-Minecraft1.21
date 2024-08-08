@@ -15,7 +15,6 @@ public class ModFoodComponents {
             new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).alwaysEdible().build();
     public static final FoodProperties POISON_SWORD =
             new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).alwaysEdible().build();
-
     public static final FoodProperties CHEESE_BERGER=new FoodProperties.Builder().nutrition(10).saturationModifier(0.5f)
             .effect(()->new MobEffectInstance(MobEffects.HUNGER,200),0.5f).build();
     public static final FoodProperties VILLAGER_ITEM = new FoodProperties.Builder().nutrition(10).saturationModifier(0.5f)
@@ -24,4 +23,9 @@ public class ModFoodComponents {
             .effect(()->new MobEffectInstance(MobEffects.HARM,20),1f).alwaysEdible().build();
     public static final FoodProperties SWITCH =new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f)
             .effect(() -> new MobEffectInstance(MobEffects.HARM,20),1f).alwaysEdible().build();
+    public static final FoodProperties STARGAZY_PIE=new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f)
+            .effect(()->new MobEffectInstance(MobEffects.POISON,200),1f)
+            .effect(()->new MobEffectInstance(MobEffects.CONFUSION,400),1f).alwaysEdible().build();
+    public static final FoodProperties MILK_FLESH=
+            new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).alwaysEdible().build();
 }

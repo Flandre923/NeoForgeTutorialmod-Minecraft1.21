@@ -81,4 +81,8 @@ public class Config
     public static boolean isBeeRideable() {
         return true;
     }
+
+    public static boolean isQinNa() {
+        return true;
+    }
 }

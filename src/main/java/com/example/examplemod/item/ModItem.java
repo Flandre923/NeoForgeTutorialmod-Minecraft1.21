@@ -41,7 +41,12 @@ public class ModItem {
     public static final DeferredItem<Item> RUBY_STAFF=registerItem("ruby_staff",
             ()-> new RubyStuffItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> SWITCH = registerItem("switch",() -> new SwitchItem(new Item.Properties().food(ModFoodComponents.SWITCH)));
-
+    public static final DeferredItem<Item> RTX4090 = registerItem("rtx4090", ()-> new RTX4090Item(Tiers.NETHERITE,new Item.Properties()));
+    public static final DeferredItem<Item> MILK_FLESH = registerItem("milk_flesh",()->new MilkFleshItem(new Item.Properties().food(ModFoodComponents.MILK_FLESH)));
+    public static final DeferredItem<Item> STARGAZY_PIE = registerItem("stargazy_pie",
+            ()-> new StargazyPieItem(new Item.Properties().food(ModFoodComponents.STARGAZY_PIE)));
+    public static final DeferredItem<Item> TIME_STOP = registerItem("time_stop",
+            ()-> new TimeStopItem(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> FU = registerItem("fu",FuItem::new);
     public static DeferredItem<Item> registerItem(String name, Supplier<Item> itemSupplier){
