@@ -73,6 +73,7 @@
     "enchantmentitemmixin.slippery.UnPickUpAbleItemMixin",
     "enchantmentitemmixin.throwableaxe.AxeItemMixin",
     "enchantmentitemmixin.throwableaxe.ItemEntityMixin",
+    "itemmixin.BowDashMixin",
     "itemmixin.MathModeMixin",
     "itemmixin.ShieldDashMixin",
     "itemmixin.ThrowableDiamondMixin",

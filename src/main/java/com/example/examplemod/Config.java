@@ -57,4 +57,8 @@ public class Config
     public static boolean isSwimTripwire() {
         return true;
     }
+
+    public static boolean isBowDashable() {
+        return true;
+    }
 }

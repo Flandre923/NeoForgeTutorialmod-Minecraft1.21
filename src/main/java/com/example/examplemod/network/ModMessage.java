@@ -65,6 +65,16 @@ public class ModMessage {
 
 
 
+        registrar.playBidirectional(
+                BowDashC2SPacket.TYPE,
+                BowDashC2SPacket.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        null,
+                        BowDashC2SPacket::receive
+                )
+        );
+
+
         // server to client
 
         registrar.playBidirectional(
