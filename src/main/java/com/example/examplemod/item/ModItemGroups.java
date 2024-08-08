@@ -42,6 +42,7 @@ public class ModItemGroups {
                 output.accept(ModItem.RTX4090.get());
                 output.accept(ModItem.TIME_STOP.get());
                 output.accept(ModItem.MILK_FLESH.get());
+                output.accept(ModItem.STARGAZY_PIE.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
                 output.accept(ModBlock.POTATO_TNT.get());
