@@ -53,4 +53,8 @@ public class Config
     public static boolean isSpyglassCanPin() {
         return true;
     }
+
+    public static boolean isSwimTripwire() {
+        return true;
+    }
 }

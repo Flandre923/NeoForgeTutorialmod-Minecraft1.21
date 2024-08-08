@@ -82,7 +82,9 @@
     "itemmixin.lead.LeadItemMixin",
     "itemmixin.lead.MobEntityMixin",
     "itemmixin.lightningrod.LightningRodMixin",
-    "itemmixin.spyglass.SpyglassMixin"
+    "itemmixin.spyglass.SpyglassMixin",
+    "itemmixin.swimmingtripwire.PlayerEntityMixin",
+    "itemmixin.swimmingtripwire.TripwireBlockMixin"
   ],
   "client": [
     "effectMixin.sheep.PlayerEntityRendererMixin",
