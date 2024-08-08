@@ -78,7 +78,9 @@
     "itemmixin.ThrowableDiamondMixin",
     "itemmixin.fireworkrocket.FireworkRocketEntityMixin",
     "itemmixin.fireworkrocket.FireworkRocketHitOnEntityMixin",
-    "itemmixin.fireworkrocket.FireworkRocketItemMixin"
+    "itemmixin.fireworkrocket.FireworkRocketItemMixin",
+    "itemmixin.lead.LeadItemMixin",
+    "itemmixin.lead.MobEntityMixin"
   ],
   "client": [
     "effectMixin.sheep.PlayerEntityRendererMixin",

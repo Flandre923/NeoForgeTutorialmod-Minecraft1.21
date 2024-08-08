@@ -37,4 +37,16 @@ public class Config
     public static boolean isAlwaysEnchantable() {
         return isAlwaysEnchantable;
     }
+
+    public static boolean isLeadCanLinkTogether() {
+        return true;
+    }
+
+    public static Float breakDistance() {
+        return 10f;
+    }
+
+    public static boolean isLeadCanLinkEveryMob() {
+        return true;
+    }
 }
