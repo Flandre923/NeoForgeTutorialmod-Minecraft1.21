@@ -37,7 +37,8 @@ public class ModItem {
     public static final DeferredItem<Item> VILLAGER_ITEM = registerItem("villager_item",() -> new VillagerItem(new Item.Properties().food(ModFoodComponents.VILLAGER_ITEM).stacksTo(1)));
     public static final DeferredItem<Item> LLAMA_ITEM = registerItem("llama_item", ()-> new LlamaItem(new Item.Properties()));
     public static final DeferredItem<Item> IRON_GOLEM_ITEM = registerItem("iron_golem_item",()-> new Item(new Item.Properties().food(ModFoodComponents.IRON_GOLEM_ITEM).stacksTo(1)));
-
+    public static final DeferredItem<Item> RUBY_STAFF=registerItem("ruby_staff",
+            ()-> new RubyStuffItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> FU = registerItem("fu",FuItem::new);
     public static DeferredItem<Item> registerItem(String name, Supplier<Item> itemSupplier){
         return ITEMS.register(name,itemSupplier);

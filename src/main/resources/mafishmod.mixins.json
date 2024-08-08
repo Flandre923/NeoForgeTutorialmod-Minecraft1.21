@@ -80,7 +80,8 @@
     "itemmixin.fireworkrocket.FireworkRocketHitOnEntityMixin",
     "itemmixin.fireworkrocket.FireworkRocketItemMixin",
     "itemmixin.lead.LeadItemMixin",
-    "itemmixin.lead.MobEntityMixin"
+    "itemmixin.lead.MobEntityMixin",
+    "itemmixin.lightningrod.LightningRodMixin"
   ],
   "client": [
     "effectMixin.sheep.PlayerEntityRendererMixin",
@@ -89,7 +90,7 @@
     "itemmixin.entityitemrenderer.irongolemitemrenderer.ItemRendererMixin",
     "itemmixin.entityitemrenderer.lightningitemrenderer.ItemRendererMixin",
     "itemmixin.entityitemrenderer.llamaitemrenderer.ItemRendererMixin",
-    "itemmixin.entityitemrenderer.villageritemrenderer.ItemRendererMixin"
+    "itemmixin.entityitemrenderer.villageritemrenderer.ItemRendererMixin",
   ],
   "injectors": {
     "defaultRequire": 1

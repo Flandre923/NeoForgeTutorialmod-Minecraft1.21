@@ -5,6 +5,7 @@ import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.item.ModItem;
 import com.example.examplemod.item.ModItemGroups;
+import com.example.examplemod.item.component.ModDataComponents;
 import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
 import com.example.examplemod.render.itemModel.ItemModelEvent;
 import com.example.examplemod.sound.ModSounds;
@@ -88,6 +89,7 @@ public class ExampleMod
         ModItemGroups.registerModItemGroups(modEventBus);
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModDataComponents.register(modEventBus);
         ModEffects.register(modEventBus);
         // 获得服务器实例
 
