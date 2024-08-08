@@ -15,6 +15,7 @@ import java.util.function.Supplier;
 public class ModItem {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MODID);
     public static final DeferredItem<Item> RUBY = registerItem("ruby",()-> new Item(new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> RAW_RUBY=registerItem("raw_ruby",()-> new Item(new Item.Properties().fireResistant()));
 
     public static final DeferredItem<Item> BREAD_SWORD = registerItem("bread_sword", BreadSwordItem::new);
     public static final DeferredItem<Item> BREAD_SWORD_HOT = registerItem("bread_sword_hot", BreadSwordHotItem::new);
@@ -39,6 +40,8 @@ public class ModItem {
     public static final DeferredItem<Item> IRON_GOLEM_ITEM = registerItem("iron_golem_item",()-> new Item(new Item.Properties().food(ModFoodComponents.IRON_GOLEM_ITEM).stacksTo(1)));
     public static final DeferredItem<Item> RUBY_STAFF=registerItem("ruby_staff",
             ()-> new RubyStuffItem(new Item.Properties().stacksTo(1)));
+
+
     public static final DeferredItem<Item> FU = registerItem("fu",FuItem::new);
     public static DeferredItem<Item> registerItem(String name, Supplier<Item> itemSupplier){
         return ITEMS.register(name,itemSupplier);

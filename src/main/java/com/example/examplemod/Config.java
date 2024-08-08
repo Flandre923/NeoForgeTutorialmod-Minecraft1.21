@@ -61,4 +61,8 @@ public class Config
     public static boolean isBowDashable() {
         return true;
     }
+
+    public static boolean isNestedBoxInfinite() {
+        return true;
+    }
 }

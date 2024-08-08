@@ -37,6 +37,7 @@ public class ModItemGroups {
                 output.accept(ModItem.IRON_GOLEM_ITEM.get());
                 output.accept(ModItem.LLAMA_ITEM.get());
                 output.accept(ModItem.RUBY_STAFF.get());
+                output.accept(ModItem.RAW_RUBY.get());
                 // BLOCK
                 output.accept(ModBlock.GOLD_MELON.asItem());
                 output.accept(ModBlock.POTATO_TNT.get());
