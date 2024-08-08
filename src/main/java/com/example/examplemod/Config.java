@@ -65,4 +65,20 @@ public class Config
     public static boolean isNestedBoxInfinite() {
         return true;
     }
+
+    public static boolean isGoatDashForever() {
+        return true;
+    }
+
+    public static boolean isGoatDashTogether() {
+        return true;
+    }
+
+    public static boolean isLlamaSpitForever() {
+        return true;
+    }
+
+    public static boolean isBeeRideable() {
+        return true;
+    }
 }

@@ -22,4 +22,6 @@ public class ModFoodComponents {
             .effect(()->new MobEffectInstance(MobEffects.HUNGER,200),1f).alwaysEdible().build();
     public static final FoodProperties IRON_GOLEM_ITEM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f)
             .effect(()->new MobEffectInstance(MobEffects.HARM,20),1f).alwaysEdible().build();
+    public static final FoodProperties SWITCH =new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.HARM,20),1f).alwaysEdible().build();
 }

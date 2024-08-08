@@ -40,6 +40,7 @@ public class ModItem {
     public static final DeferredItem<Item> IRON_GOLEM_ITEM = registerItem("iron_golem_item",()-> new Item(new Item.Properties().food(ModFoodComponents.IRON_GOLEM_ITEM).stacksTo(1)));
     public static final DeferredItem<Item> RUBY_STAFF=registerItem("ruby_staff",
             ()-> new RubyStuffItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SWITCH = registerItem("switch",() -> new SwitchItem(new Item.Properties().food(ModFoodComponents.SWITCH)));
 
 
     public static final DeferredItem<Item> FU = registerItem("fu",FuItem::new);

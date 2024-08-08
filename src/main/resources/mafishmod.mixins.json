@@ -87,7 +87,12 @@
     "itemmixin.lightningrod.LightningRodMixin",
     "itemmixin.spyglass.SpyglassMixin",
     "itemmixin.swimmingtripwire.PlayerEntityMixin",
-    "itemmixin.swimmingtripwire.TripwireBlockMixin"
+    "itemmixin.swimmingtripwire.TripwireBlockMixin",
+    "mobmixin.BeeRideableMixin",
+    "mobmixin.goatdashforever.GoatBrainMixin",
+    "mobmixin.llamaspitforever.LlamaEntity_SpitRevengeGoalMixin",
+    "mobmixin.llamaspitforever.LlamaEntityMixin",
+    "mobmixin.pandaeatswitch.PandaEntityMixin"
   ],
   "client": [
     "effectMixin.sheep.PlayerEntityRendererMixin",
