@@ -1,5 +1,7 @@
 package com.example.examplemod;
 
+import com.example.examplemod.item.component.ModComponents;
+import com.example.examplemod.item.custom.ExampleComponent;
 import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
 import org.slf4j.Logger;
 
@@ -59,6 +61,8 @@ public class ExampleMod
     public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
+    public static final DeferredItem<Item> EXAMPLE_COMPONENT_ITEM = ITEMS.register("example_component_item",  ExampleComponent::new);
+
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
@@ -66,6 +70,7 @@ public class ExampleMod
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(EXAMPLE_COMPONENT_ITEM.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -85,6 +90,7 @@ public class ExampleMod
 
         //
         ModEnchantmentEffectComponents.register(modEventBus);
+        ModComponents.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
