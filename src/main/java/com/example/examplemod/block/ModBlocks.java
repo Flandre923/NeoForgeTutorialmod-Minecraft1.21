@@ -22,10 +22,10 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ExampleMod.MODID);
 
 
-    public static DeferredBlock<Block> EXAMPLE_BLOCK = registerBlockAndItem("example_block", ()-> new WireBrushingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static DeferredBlock<WireBrushingBlock> WIRE_BRUSHING_BLOCK = registerBlockAndItem("wire_brushing_block", ()-> new WireBrushingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
 
 
-    public static <T extends Block,I extends Item> DeferredBlock<T> registerBlockAndItem(String name, Supplier<T> Block){
+    public static <T extends Block> DeferredBlock<T> registerBlockAndItem(String name, Supplier<T> Block){
         DeferredBlock<T> block = BLOCKS.register(name, Block);
         ModItems.ITEMS.register(name,() -> new BlockItem(block.get(), new Item.Properties()));
         return block;

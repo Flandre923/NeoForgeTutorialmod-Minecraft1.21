@@ -1,11 +1,13 @@
 package com.example.examplemod;
 
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.block.blockentity.ModBlockEntity;
 import com.example.examplemod.item.ModCreativeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.component.ModComponents;
 import com.example.examplemod.item.custom.ExampleComponent;
 import com.example.examplemod.item.enchantment.ModEnchantmentEffectComponents;
+import com.example.examplemod.menu.ModMenuTypes;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -55,8 +57,10 @@ public class ExampleMod
 
         //
         ModItems.register(modEventBus);
-        ModCreativeTab.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeTab.register(modEventBus);
+        ModBlockEntity.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         //
         ModEnchantmentEffectComponents.register(modEventBus);

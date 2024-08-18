@@ -1,0 +1,4 @@
+{
+  "tutorialmod.tooltip.liquid.amount": "%s mB",
+  "tutorialmod.tooltip.liquid.amount.with.capacity": "%s / %s mB"
+}

@@ -4,6 +4,7 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.datagen.item.enchantment.ModEnchantments;
 import com.example.examplemod.datagen.item.tags.ModBlockTagsProvider;
 import com.example.examplemod.datagen.item.tags.ModtemTagsProvider;
+import com.example.examplemod.datagen.lang.ModLangGen;
 import com.ibm.icu.util.Output;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -28,6 +29,9 @@ public class ModDataGenerator {
         PackOutput output = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+        // lang us
+        generator.addProvider(event.includeClient(),new ModLangGen(output,"en_us"));
 
         // 为数据生成器添加一个自定义的数据包内置条目提供者
         generator.addProvider(event.includeServer(),new ModDatapackBuiltinEntriesProvider(output,lookupProvider));
