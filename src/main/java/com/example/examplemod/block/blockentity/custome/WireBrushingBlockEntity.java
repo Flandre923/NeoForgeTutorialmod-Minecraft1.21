@@ -114,7 +114,9 @@ public class WireBrushingBlockEntity extends BlockEntity implements MenuProvider
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int containerId, Inventory playerInventory, Player player) {
-        PacketDistributor.sendToAllPlayers(new FluidSyncS2CPacket(this.getFluidStack(), worldPosition));
+        if (!this.getFluidStack().isEmpty()){
+            PacketDistributor.sendToAllPlayers(new FluidSyncS2CPacket(this.getFluidStack(), worldPosition));
+        }
         return new WireBrushingMenu(containerId, playerInventory, this);
     }
 
