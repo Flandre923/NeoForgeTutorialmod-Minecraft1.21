@@ -16,17 +16,17 @@ public class FluidClientEvent {
     public static void fluidClient(RegisterClientExtensionsEvent event){
         FluidResources.fluidList.forEach(fluid -> {
             if (fluid.TYPE.get() instanceof ModBaseFluidType modBaseFluidType)
-                event.registerFluidType(modBaseFluidType.getClientFluidType(), modBaseFluidType);
+                event.registerFluidType(modBaseFluidType.getClientExtensions(), modBaseFluidType);
         });
     }
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-            FluidResources.fluidList.forEach(fluid -> {
-                if (fluid.isTranslucent){
+        FluidResources.fluidList.stream()
+                .filter(fluid -> fluid.isTranslucent)
+                .forEach(fluid -> {
                     ItemBlockRenderTypes.setRenderLayer(fluid.FLUID.get(), RenderType.translucent());
                     ItemBlockRenderTypes.setRenderLayer(fluid.FLUID_FLOW.get(), RenderType.translucent());
-                }
-            });
+                });
     }
 }

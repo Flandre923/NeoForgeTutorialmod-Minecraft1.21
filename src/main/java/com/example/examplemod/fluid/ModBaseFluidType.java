@@ -25,8 +25,7 @@ public class ModBaseFluidType extends FluidType {
 	public final Vector3f FOG_COLOR;
 	public final float fogStart;
 	public final float fogEnd;
-
-	public final ModClientFluidType CLIENT_FLUID_TYPE;
+	public final ModClientFluidType clientFluidType;
 
 
 	public ModBaseFluidType(Properties properties, FunkyFluidInfo info) {
@@ -40,7 +39,7 @@ public class ModBaseFluidType extends FluidType {
 		fogStart = info.fogStart;
 		fogEnd = info.fogEnd;
 
-		CLIENT_FLUID_TYPE = new ModClientFluidType(RENDER_OVERLAY, TEXTURE_STILL, TEXTURE_FLOW, TEXTURE_OVERLAY, FOG_COLOR, fogStart, fogEnd);
+		clientFluidType = new ModClientFluidType(RENDER_OVERLAY, TEXTURE_STILL, TEXTURE_FLOW, TEXTURE_OVERLAY, FOG_COLOR, fogStart, fogEnd);
 	}
 
 	public static class FunkyFluidInfo {
@@ -62,12 +61,12 @@ public class ModBaseFluidType extends FluidType {
 	}
 
 	// 此处可以重写你自己的客户端流体类型，并实现IClientFluidTypeExtensions接口
-	public IClientFluidTypeExtensions getClientFluidType() {
-		return CLIENT_FLUID_TYPE;
+	public IClientFluidTypeExtensions getClientExtensions() {
+		return clientFluidType;
 	}
 
 
-	public static class ModClientFluidType implements  IClientFluidTypeExtensions{
+	private static class ModClientFluidType implements  IClientFluidTypeExtensions{
 
 		public final ResourceLocation RENDER_OVERLAY;
 		public final ResourceLocation TEXTURE_STILL;
