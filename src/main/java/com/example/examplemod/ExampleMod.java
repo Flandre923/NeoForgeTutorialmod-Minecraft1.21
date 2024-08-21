@@ -2,6 +2,8 @@ package com.example.examplemod;
 
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.block.blockentity.ModBlockEntity;
+import com.example.examplemod.fluid.FluidResources;
+import com.example.examplemod.fluid.ModFluids;
 import com.example.examplemod.item.ModCreativeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.component.ModComponents;
@@ -61,7 +63,9 @@ public class ExampleMod
         ModCreativeTab.register(modEventBus);
         ModBlockEntity.register(modEventBus);
         ModMenuTypes.register(modEventBus);
-
+        //
+        FluidResources.register(modEventBus,ModCreativeTab.EXAMPLE_TAB);
+        ModFluids.init();
         //
         ModEnchantmentEffectComponents.register(modEventBus);
         ModComponents.register(modEventBus);
