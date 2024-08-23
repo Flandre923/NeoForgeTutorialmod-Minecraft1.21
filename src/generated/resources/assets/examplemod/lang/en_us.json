@@ -1,0 +1,5 @@
+{
+  "enchantment.examplemod.my_auto_smelt": "Auto Smelt",
+  "tutorialmod.tooltip.liquid.amount": "%s mB",
+  "tutorialmod.tooltip.liquid.amount.with.capacity": "%s / %s mB"
+}
